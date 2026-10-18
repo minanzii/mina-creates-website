@@ -983,3 +983,42 @@ select:focus {
     right: 0;
     width: 100%;
 }
+
+
+
+/* FIX: Make the navbar background fill the entire screen */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header > .container {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header .navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Keep the navigation responsive */
+@media only screen and (max-width: 800px) {
+    .header > .container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .header .navbar {
+        flex-wrap: wrap;
+    }
+}

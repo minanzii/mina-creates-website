@@ -64,7 +64,6 @@ p {
 .navbar {
     display: flex;
     align-items: center;
-    padding-left: 20px;
 }
 
 .nav-title {

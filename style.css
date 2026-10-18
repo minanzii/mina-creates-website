@@ -83,6 +83,10 @@ nav ul li {
     line-height: 60px;
 }
 
+.btn-header {
+    margin-top: 15px;
+}
+
 .btn {
     display: inline-block;
     background: purple;

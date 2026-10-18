@@ -963,3 +963,23 @@ select:focus {
     background-color:#dcc7e9;
 }
 
+/* ----- NAVBAR FULL-WIDTH FIX (navbar only) ----- */
+.header .container {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.header .navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header {
+    left: 0;
+    right: 0;
+    width: 100%;
+}

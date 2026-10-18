@@ -1022,3 +1022,54 @@ select:focus {
         flex-wrap: wrap;
     }
 }
+
+
+/* FINAL NAVBAR WIDTH FIX */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    z-index: 1000;
+
+    /* Background now belongs to the full-width header */
+    background: linear-gradient(45deg, #dcc7e9, #efb9d0);
+    border-bottom: 2px solid black;
+    box-shadow: 0 6px 18px rgba(147, 103, 190, 0.08);
+    box-sizing: border-box;
+}
+
+/* Remove the width restriction from the inner container */
+.header > .container {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0 25px;
+    box-sizing: border-box;
+
+    /* Prevent duplicate background and border */
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+/* Keep navbar contents aligned */
+.header .navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 800px) {
+    .header > .container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+

@@ -112,3 +112,148 @@
         margin-left: 0;
     }
 }
+
+
+/* ===== FULL-WIDTH NAVBAR FIX ===== */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header .container {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #dcc7e9, #efb9d0);
+    border-bottom: 2px solid black;
+}
+
+.header .navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 90px;
+    padding: 10px 25px;
+    gap: 15px;
+}
+
+.header .logo {
+    flex-shrink: 0;
+}
+
+.header .logo img {
+    display: block;
+    width: 80px;
+    height: auto;
+}
+
+.header .nav-title {
+    flex-shrink: 0;
+    font-size: 42px;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.header nav {
+    flex: 1;
+    min-width: 0;
+    text-align: right;
+}
+
+.header nav ul {
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header nav ul li {
+    display: block;
+    margin: 0;
+}
+
+.header .cart-icon {
+    display: block;
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.header .menu-icon {
+    display: none;
+    width: 28px;
+    height: auto;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .header .navbar {
+        padding: 10px 15px;
+        gap: 10px;
+    }
+
+    .header .nav-title {
+        font-size: 32px;
+    }
+
+    .header nav ul {
+        gap: 6px;
+    }
+
+    .header .nav-btn {
+        padding: 7px 12px;
+    }
+}
+
+@media (max-width: 700px) {
+    .header .navbar {
+        min-height: 80px;
+    }
+
+    .header .nav-title {
+        font-size: clamp(24px, 5vw, 32px);
+    }
+
+    .header nav {
+        flex: 0;
+    }
+
+    .header nav ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        display: block;
+        background: #6a3a6f;
+        text-align: center;
+        transition: max-height 0.4s ease;
+    }
+
+    .header nav ul li {
+        padding: 12px 0;
+    }
+
+    .header nav ul li a {
+        color: white;
+    }
+
+    .header .menu-icon {
+        display: block;
+    }
+
+    .header .cart-icon {
+        width: 25px;
+        height: 25px;
+    }
+}
+

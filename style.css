@@ -1008,3 +1008,20 @@ select:focus {
     }
 }
 
+
+.instagram-video {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.instagram-video iframe {
+    max-width: 100% !important;
+}
+
+.instagram-media {
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 auto !important;
+}
+
